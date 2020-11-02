@@ -82,9 +82,42 @@
         box-shadow: none;
       }
 
-      .card-img-top {
+      .card-top {
+        position: relative;
+        width: 100%;
         border-radius: 0;
         max-width: 350px;
+      }
+
+      .play-btn {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        background-color: transparent;
+        background-image: url("../images/play_button.svg");
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+      }
+
+      .play-btn:focus {
+        outline: none;
+      }
+
+      .play-btn.playing {
+        background-image: url("../images/pause_button.svg");
+      }
+
+      .card-img-top {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
       }
 
       ul.list-group .list-group-item {
@@ -146,7 +179,7 @@
           margin: 50px auto !important;
         }
 
-        .card-img-top {
+        .card-top {
           width: 100%;
           margin: 0 auto;
         }
@@ -253,11 +286,24 @@
         >
           <div class="card foundee-shadow">
             <!-- Move shadow component here -->
-            <img
-              class="card-img-top foundee-shadow"
-              alt="Banner"
-              src="https://static.found.ee/user/6013/9bd04ced-b1a8-48ec-8c1f-6b6d06e9abf6.jpeg"
-            />
+            <div class="card-top">
+              <img
+                class="card-img-top foundee-shadow"
+                alt="Banner"
+                src="https://static.found.ee/user/6013/9bd04ced-b1a8-48ec-8c1f-6b6d06e9abf6.jpeg"
+              />
+              <button
+                id="play-control"
+                class="play-btn"
+                onclick="togglePlay()"
+              ></button>
+              <audio id="audio-player">
+                <source
+                  src="https://p.scdn.co/mp3-preview/3eb16018c2a700240e9dfb8817b6f2d041f15eb1?cid=774b29d4f13844c495f206cafdad9c86"
+                  type="audio/mp3"
+                />
+              </audio>
+            </div>
             <div class="card-body">
               <h4 class="card-title text-center">New Language</h4>
               <p class="card-text text-center">Come Alive</p>
@@ -667,6 +713,22 @@
             _requestConcert(emailInput.value, cityValue);
           } else {
             emailInput.focus();
+          }
+        };
+      })(window, document);
+    </script>
+
+    <script type="application/javascript">
+      (function (w, d) {
+        var audio = d.getElementById("audio-player");
+        var playBtn = d.getElementById("play-control");
+        w.togglePlay = function togglePlay() {
+          if (audio.paused === false) {
+            audio.pause();
+            playBtn.classList.remove("playing");
+          } else {
+            audio.play();
+            playBtn.classList.add("playing");
           }
         };
       })(window, document);
