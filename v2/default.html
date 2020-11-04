@@ -319,6 +319,17 @@
                 alt="Banner"
                 src="https://static.staging.found.ee/user/14923/2a8dfcc7-013a-4fe1-915a-27216787a72c.jpeg"
               />
+              <button
+                id="play-control"
+                class="play-btn"
+                onclick="togglePlay()"
+              ></button>
+              <audio id="audio-player">
+                <source
+                  src="https://p.scdn.co/mp3-preview/3eb16018c2a700240e9dfb8817b6f2d041f15eb1?cid=774b29d4f13844c495f206cafdad9c86"
+                  type="audio/mp3"
+                />
+              </audio>
             </div>
             <div class="card-body">
               <h4 class="card-title text-center">Aurora</h4>
@@ -827,6 +838,21 @@
             _requestConcert(emailInput.value, cityValue);
           } else {
             emailInput.focus();
+          }
+        };
+      })(window, document);
+    </script>
+    <script type="application/javascript">
+      (function (w, d) {
+        var audio = d.getElementById("audio-player");
+        var playBtn = d.getElementById("play-control");
+        w.togglePlay = function togglePlay() {
+          if (audio.paused === false) {
+            audio.pause();
+            playBtn.classList.remove("playing");
+          } else {
+            audio.play();
+            playBtn.classList.add("playing");
           }
         };
       })(window, document);
