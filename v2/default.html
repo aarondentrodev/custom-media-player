@@ -1,0 +1,865 @@
+<html lang="en">
+  <head>
+    <meta name="apple-music-developer-token" content="" />
+    <meta name="apple-music-app-name" content="Foundee" />
+    <meta name="apple-music-app-build" content="1978.4.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="twitter:title" content="Aurora" />
+    <meta name="twitter:site" content="@found_ee" />
+    <meta property="og:title" content="Aurora" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://static.staging.found.ee/user/14923/2a8dfcc7-013a-4fe1-915a-27216787a72c.jpeg"
+    />
+    <meta
+      property="og:image"
+      content="https://static.staging.found.ee/user/14923/2a8dfcc7-013a-4fe1-915a-27216787a72c.jpeg"
+    />
+    <meta property="og:url" content="https://staging.found.ee/73X7" />
+    <meta property="og:type" content="music.album" />
+    <meta property="og:site_name" content="Found.ee" />
+    <meta property="og:description" content="&nbsp;" />
+    <title>Aurora</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://staging.found.ee/super/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://static.staging.found.ee/static/styles.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400"
+      rel="stylesheet"
+    />
+    <script src="https://js-cdn.music.apple.com/musickit/v1/musickit.js"></script>
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      "function" != typeof Object.assign &&
+        Object.defineProperty(Object, "assign", {
+          value: function (e, t) {
+            "use strict";
+            if (null == e)
+              throw new TypeError("Cannot convert undefined or null to object");
+            for (var n = Object(e), r = 1; r < arguments.length; r++) {
+              var o = arguments[r];
+              if (null != o)
+                for (var c in o)
+                  Object.prototype.hasOwnProperty.call(o, c) && (n[c] = o[c]);
+            }
+            return n;
+          },
+          writable: !0,
+          configurable: !0,
+        });
+    </script>
+    <style type="text/css">
+      body {
+        font-family: "Nunito Sans", sans-serif;
+      }
+
+      .subs-email-fail {
+        color: #ff0000;
+      }
+
+      .card {
+        border: none;
+        background: transparent !important;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+      }
+
+      .card-top {
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        max-width: 350px;
+      }
+
+      .play-btn {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        background-color: transparent;
+        background-image: url("https://static.staging.found.ee/static/play_button.svg");
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+      }
+
+      .play-btn:focus {
+        outline: none;
+      }
+
+      .play-btn.playing {
+        background-image: url("https://static.staging.found.ee/static/pause_button.svg");
+      }
+
+      .card-img-top {
+        border-radius: 0;
+        max-width: 350px;
+      }
+
+      ul.list-group .list-group-item {
+        cursor: pointer;
+      }
+
+      ul.list-group .list-group-item {
+        padding: 5px;
+        border: none;
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+        margin: 1em 0 0 0;
+        color: #707070;
+        background-color: #fff;
+        font-weight: 300;
+        font-size: 0.9em;
+        display: block;
+        width: 100%;
+        text-align: left;
+        border-radius: 0.3em;
+      }
+
+      a,
+      a:hover,
+      a:focus,
+      a:visited {
+        color: #707070;
+        text-decoration: none;
+        background-color: transparent;
+      }
+
+      ul.list-group .list-group-item:hover,
+      ul.list-group .list-group-item:active {
+        background: #fff;
+      }
+
+      li.list-group-item .row {
+        align-items: center;
+        color: #000000;
+      }
+
+      .foundee-shadow {
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
+      }
+
+      .space-above {
+        margin: 50px auto;
+      }
+
+      .card-services {
+        margin: 75px auto 0;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .space-above {
+          margin: 0 auto 50px;
+        }
+
+        .v2 .space-above {
+          margin: 50px auto !important;
+        }
+
+        .card-img-top {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .card-top {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .card-services {
+          margin: 0 auto;
+        }
+
+        .card-title {
+          font-size: 1.25rem;
+        }
+      }
+
+      .foundee-input {
+        border: none;
+        background: transparent;
+        outline: 0;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .foundee-store-icon {
+        max-height: 36px;
+        max-width: 150px;
+      }
+
+      .foundee-action-btn {
+        background-color: transparent;
+        border: none;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        color: #707070;
+      }
+
+      .foundee-form {
+        margin-bottom: 0;
+      }
+
+      .v2 .card {
+        max-width: 350px;
+        margin: 0 auto;
+      }
+
+      .v2 .card-body {
+        background-color: #2e2e2e;
+        text-align: center;
+        padding: 0.5em;
+      }
+
+      .v2 .card-title,
+      .v2 .card-text {
+        color: #ffffff;
+      }
+
+      .v2 .card-text {
+        font-weight: 200;
+      }
+
+      .v2 ul.list-group .list-group-item {
+        padding: 10px;
+        border: none;
+        border-radius: 0;
+        margin: 0;
+      }
+
+      .foundee-page-social-icons {
+        margin: 0.8rem 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 0.4rem;
+      }
+
+      .foundee-page-social-icons > a {
+        margin: 0.2rem 0.4rem;
+      }
+    </style>
+    <style type="text/css">
+      /**
+       * Background Color Change goes here
+       */
+      .background {
+        /** For background color */
+        background-color: #eeeeee;
+        /** For background image */
+        background-image: url("https://static.staging.found.ee/user/14923/2a8dfcc7-013a-4fe1-915a-27216787a72c.jpeg");
+        /** Other background logic to be picked from the old template */
+        background-repeat: no-repeat;
+        /* Set rules to fill background */
+        min-height: 100%;
+        min-width: 1024px;
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+      }
+      .background-blur {
+        width: 100%;
+        height: 100vh;
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+      }
+      @media screen and (max-width: 1024px) {
+        /* Specific to this particular image */
+        .background {
+          left: 50%;
+          margin-left: -512px; /* 50% */
+        }
+      }
+    </style>
+    <style type="text/css">
+      .foundee-text,
+      .foundee-text:hover,
+      .foundee-text:visited,
+      .foundee-text:focus,
+      .foundee-text:active {
+        /** Override font color */
+        color: #707070;
+      }
+    </style>
+  </head>
+
+  <body class="foundee-background">
+    <div class="background">
+      <div class="background-blur"></div>
+    </div>
+    <div class="container v2">
+      <div class="row space-above">
+        <div
+          class="col-xs-6 offset-xs-3 col-sm-6 offset-sm-3 col-md-4 offset-md-4"
+        >
+          <div class="card foundee-shadow">
+            <!-- Move shadow component here -->
+            <div class="card-top">
+              <img
+                class="card-img-top foundee-shadow"
+                alt="Banner"
+                src="https://static.staging.found.ee/user/14923/2a8dfcc7-013a-4fe1-915a-27216787a72c.jpeg"
+              />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title text-center">Aurora</h4>
+              <p class="card-text text-center">Divine Propulsion System 2</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <!-- Store row -->
+              <li class="list-group-item">
+                <a
+                  href="https://staging.found.ee/73X7/ms-amazon-0"
+                  target="_blank"
+                >
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.staging.found.ee/static/logo-amazon.svg"
+                        alt="Amazon"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Buy</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://staging.found.ee/73X7/ms-spotify-1"
+                  target="_blank"
+                >
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.staging.found.ee/static/logo-spotify.svg"
+                        alt="Spotify"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Listen</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://staging.found.ee/73X7/ms-apple-2"
+                  target="_blank"
+                >
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.staging.found.ee/static/logo-applemusic.svg"
+                        alt="Apple Music"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Listen</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://staging.found.ee/73X7/ms-itunes-3"
+                  target="_blank"
+                >
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.staging.found.ee/static/logo-itunes.svg"
+                        alt="iTunes"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Buy</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <form class="foundee-form" onsubmit="onRequestClick(event)">
+                  <div class="row">
+                    <div class="col-3">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.staging.found.ee/static/logo-concertrequest.svg"
+                        alt="Concert Request"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-5">
+                      <input
+                        class="foundee-input border-bottom"
+                        id="input-request-concert-email"
+                        type="email"
+                        value=""
+                        required
+                        placeholder="Your Email"
+                      />
+                      <input
+                        class="foundee-input border-bottom"
+                        id="input-request-concert-city"
+                        type="text"
+                        value=""
+                        placeholder="Your City"
+                        required
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <button class="foundee-action-btn" type="submit">
+                        Request
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="row mt-1 d-none"
+                    id="foundee-concert-request-alert"
+                  >
+                    <div class="col-12 text-center">
+                      <span id="alert" class="text-success"></span>
+                    </div>
+                  </div>
+                </form>
+              </li>
+              <li class="list-group-item">
+                <form class="foundee-form" onsubmit="onSubscribeClick(event)">
+                  <div class="row">
+                    <div class="col-3">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.staging.found.ee/static/logo-email.svg"
+                        alt="Email Capture"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-5">
+                      <input
+                        class="foundee-input border-bottom"
+                        id="input-subs-email"
+                        type="email"
+                        value=""
+                        style=""
+                        required
+                        placeholder="Enter Your Email"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <button class="foundee-action-btn" type="submit">
+                        Subscribe
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row mt-1 d-none" id="foundee-email-capture-alert">
+                    <div class="col-12 text-center">
+                      <span id="alert" class="text-success"></span>
+                    </div>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cookies-ccpa" class="ccda cookies">
+      <div class="justify-content-lg-center align-items-lg-center py-3">
+        <div class="col-12 text-center">
+          <div class="disclaimer-text px-3 px-lg-0">
+            <p class="font-small-3 m-0">
+              By using this service, you have accepted Cookies based on our<br />
+              <a target="_blank" href="https://staging.found.ee/super/usersgdpr"
+                >Privacy Policy</a
+              >, and
+              <a target="_blank" href="https://staging.found.ee/super/usersgdpr"
+                >Terms of Service</a
+              >.
+              <a target="_blank" href="https://staging.found.ee/super/ccpa"
+                >Manage</a
+              >
+              your permissions here.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cookies" class="gdpr cookies" style="display: none">
+      <div class="container">
+        <div class="row justify-content-lg-center align-items-lg-center py-3">
+          <div class="col-12 col-lg-8 text-center">
+            <div class="disclaimer-text px-3 px-lg-0">
+              <p class="font-small-3 foundee-text">
+                <em
+                  >I agree to the I have been informed and read the
+                  <a
+                    target="_blank"
+                    href="https://staging.found.ee/super/usersgdpr"
+                    >Privacy Policy</a
+                  >. I understand that Thinketing, Inc. Will process my data as
+                  data controller to manage my registration with found.ee, which
+                  is necessary for the performance of the contract, and that my
+                  data will not be shared with third parties unless legally
+                  required. I am aware I have the right to access, rectify and
+                  erase my data, among others.
+                </em>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 text-center">
+            <button
+              class="btn btn-reject mr-2 foundee-text"
+              onclick="onRejectBtn()"
+            >
+              REJECT
+            </button>
+            <button class="btn btn-accept foundee-text" onclick="onAcceptBtn()">
+              ACCEPT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="application/javascript">
+      (function (w, d) {
+        var dialog = d.querySelector("#cookies");
+        w.saveSelectedRetailer = function saveSelectedRetailer(
+          retailerId,
+          iPageId
+        ) {
+          var check = d.querySelector("#remember-checkbox");
+          if (check.checked) {
+            var value =
+              "pageId=" + iPageId + "|selectedRetail=" + retailerId + ";";
+            d.cookie = "iPageCookie=" + value + ";max-age=6912000;path=/";
+          }
+        };
+
+        w.onAcceptBtn = function onAcceptBtn() {
+          if (dialog) {
+            dialog.style.display = "none";
+            d.cookie = "isAcceptedPermissions=true;max-age=7776000;path=/;";
+          }
+          w.location.reload(true);
+        };
+
+        w.onRejectBtn = function onRejectBtn() {
+          if (dialog) {
+            dialog.style.display = "none";
+            d.cookie = "isAcceptedPermissions=false;max-age=2592000;path=/;";
+          }
+          w.location.reload(true);
+        };
+
+        d.onreadystatechange = function () {
+          if (d.readyState === "complete") {
+            if (
+              d.getElementsByClassName("link-container").childElementCount === 1
+            ) {
+              let checkBox = d.getElementById("remember");
+              checkBox.style.display = "none";
+            }
+            // Visitor has accepted GDPR conditions
+            dialog.style.display = "none";
+          }
+        };
+      })(window, document);
+    </script>
+    <script type="text/javascript">
+      (function (w, d) {
+        function cleanShortCode(path) {
+          if (path.startsWith("/")) {
+            return path.substr(1, path.length - 1);
+          }
+          return path;
+        }
+        function prepareShortCodePayload(path) {
+          var split = path.split("/");
+          if (split.length === 1) {
+            return {
+              shortCode: split[0],
+              referrer: d.referrer,
+            };
+          }
+          return {
+            shortCode: split[0],
+            retailer: split[1],
+            referrer: d.referrer,
+          };
+        }
+        function _sendStats() {
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "/stats", true);
+          xhr.setRequestHeader("Content-type", "application/json");
+          xhr.onload = function () {};
+          xhr.send(JSON.stringify(prepareShortCodePayload(shortCode)));
+        }
+        function _sendStatsUnique() {
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "/stats/unique", true);
+          xhr.setRequestHeader("Content-type", "application/json");
+          xhr.onload = function () {
+            d.cookie = shortCode + "=" + "false;max-age=2592000;path=/";
+          };
+          xhr.send(
+            JSON.stringify(
+              Object.assign({}, prepareShortCodePayload(shortCode), {
+                unique:
+                  d.cookie.split("; ").indexOf(shortCode + "=false") === -1,
+              })
+            )
+          );
+        }
+        if (
+          typeof w.navigator !== "undefined" &&
+          !!~w.navigator.userAgent.indexOf("bot")
+        ) {
+          return false;
+        }
+        var shortCode = cleanShortCode(d.location.pathname);
+        // Run unique stats
+        if (d.cookie.split("; ").indexOf(shortCode + "=false") === -1) {
+          _sendStatsUnique();
+        }
+        _sendStats();
+      })(window, document);
+    </script>
+    <script type="text/javascript">
+      (function (w, d) {
+        w.onApplePreAdd = function onApplePreAdd(link, typeInput, idInput) {
+          let music = MusicKit.getInstance();
+          music.authorize().then(function (token) {
+            music
+              .addToLibrary(idInput, typeInput.toLowerCase())
+              .then(function () {
+                window.open(link, "_blank");
+                alert(
+                  "Woo hoo! It's added to your library. You can hear it upon release."
+                );
+              });
+          });
+        };
+      })(window, document);
+    </script>
+    <script type="text/javascript">
+      (function (w, d) {
+        function guid() {
+          function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+              .toString(16)
+              .substring(1);
+          }
+          return (
+            s4() +
+            s4() +
+            "-" +
+            s4() +
+            "-" +
+            s4() +
+            "-" +
+            s4() +
+            "-" +
+            s4() +
+            s4() +
+            s4()
+          );
+        }
+
+        function getCookie(name) {
+          var name = name + "=";
+          var ca = document.cookie.split(";");
+          for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === " ") c = c.substring(1);
+            if (c.indexOf(name) === 0)
+              return c.substring(name.length, c.length);
+          }
+          return "";
+        }
+
+        function _onAlert(element, message, status) {
+          element.className = element.className.replace("d-none", "d-all");
+          var alertElement = element.querySelector(
+            "#" + element.id + " #alert"
+          );
+          alertElement.className = status;
+          alertElement.innerText = message;
+          setTimeout(function () {
+            element.className = element.className.replace("d-all", "d-none");
+          }, 5000);
+        }
+
+        function _onSuccess(element, message) {
+          _onAlert(element, message, "text-success");
+        }
+
+        function _onError(element, message) {
+          _onAlert(element, message, "text-danger");
+        }
+
+        function _subscribe(email, successCallback, errorCallback) {
+          var xhr = new XMLHttpRequest();
+          xhr.open(
+            "POST",
+            "https://api.staging.found.ee/settings-proxy/modal/capture",
+            true
+          );
+          xhr.setRequestHeader("Content-type", "application/json");
+          xhr.onload = function () {
+            _onSuccess(
+              document.querySelector("#foundee-email-capture-alert"),
+              "Thank you for subscribing!"
+            );
+            if (successCallback) {
+              successCallback();
+            }
+          };
+          xhr.onerror = function () {
+            _onError(
+              document.querySelector("#foundee-email-capture-alert"),
+              "Something went wrong while subscribing!"
+            );
+            if (errorCallback) {
+              errorCallback();
+            }
+          };
+          var uid = getCookie("uid");
+          if (!uid) uid = guid();
+          var payload = {
+            userId: 14923,
+            modalId: 53220,
+            cookieId: uid,
+            type: "PAGE_USER",
+            settings: [{ name: "EMAIL", value: email }],
+          };
+          xhr.send(JSON.stringify(payload));
+        }
+
+        function _requestConcert(email, city) {
+          var xhr = new XMLHttpRequest();
+          xhr.open(
+            "POST",
+            "https://api.staging.found.ee/settings-proxy/modal/capture",
+            true
+          );
+          xhr.setRequestHeader("Content-type", "application/json");
+          xhr.onload = function () {
+            _onSuccess(
+              document.querySelector("#foundee-concert-request-alert"),
+              "Thank you for submitting your request!"
+            );
+          };
+          xhr.onerror = function () {
+            _onError(
+              document.querySelector("#foundee-concert-request-alert"),
+              "Something went wrong while submitting your request!"
+            );
+          };
+          var uid = getCookie("uid");
+          if (!uid) uid = guid();
+          var payload = {
+            userId: 14923,
+            modalId: 53220,
+            cookieId: uid,
+            type: "PAGE_USER",
+            settings: [
+              { name: "EMAIL", value: email + "," + city, controlValue: email },
+            ],
+          };
+          xhr.send(JSON.stringify(payload));
+        }
+
+        w.onSubscribeClick = function (event, successCallback, errorCallback) {
+          event.preventDefault();
+          const mail_format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          const inputText = d.querySelector("#input-subs-email");
+          if (inputText.value.match(mail_format)) {
+            inputText.focus();
+            _subscribe(inputText.value, successCallback, errorCallback);
+          } else {
+            inputText.focus();
+          }
+        };
+
+        w.onRequestClick = function (event) {
+          event.preventDefault();
+          const mail_format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          const emailInput = d.querySelector("#input-request-concert-email");
+          const cityInput = d.querySelector("#input-request-concert-city");
+          if (emailInput.value.match(mail_format)) {
+            emailInput.focus();
+            var cityValue = cityInput.value.replace(/\,/g, " ");
+            _requestConcert(emailInput.value, cityValue);
+          } else {
+            emailInput.focus();
+          }
+        };
+      })(window, document);
+    </script>
+
+    <script>
+      !(function (e, t, n, s, a, c, p, i, o, u) {
+        e[a] ||
+          (((i = e[a] = function () {
+            i.process ? i.process.apply(i, arguments) : i.queue.push(arguments);
+          }).queue = []),
+          (i.pixelId = "6d25c140-5a30-40db-b0b7-1f20a9e25065"),
+          (i.t = 1 * new Date()),
+          ((o = t.createElement(n)).async = 1),
+          (o.src =
+            "https://staging.found.ee/dmp/pixel.js?t=" +
+            864e5 * Math.ceil(new Date() / 864e5)),
+          (u = t.getElementsByTagName(n)[0]).parentNode.insertBefore(o, u));
+      })(window, document, "script", 0, "foundee");
+      foundee("", "Y");
+    </script>
+  </body>
+</html>
