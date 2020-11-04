@@ -855,6 +855,9 @@
             playBtn.classList.add("playing");
           }
         };
+        audio.addEventListener("ended", (event) => {
+          playBtn.className = "play-btn";
+        });
       })(window, document);
     </script>
 
