@@ -1,0 +1,1182 @@
+<html lang="en">
+  <head>
+    <meta
+      name="apple-music-developer-token"
+      content="eyJraWQiOiJYNk1UMjRGNTRGIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiI0OVAyNzRYS1dNIiwiZXhwIjoxNjA1MjI0MDM2LCJpYXQiOjE2MDUxMzc2MzZ9.GmilWnsBfavQ-TVT-cpmV9u1ZIy7AoJvC7SO2skevSnCE-WYma50jGoWX14i3q4sCrBiQjNxekSTw9jJBmjzAg"
+    />
+    <meta name="apple-music-app-name" content="Foundee" />
+    <meta name="apple-music-app-build" content="1978.4.1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="twitter:title" content="Rhye - Home " />
+    <meta name="twitter:site" content="@found_ee" />
+    <meta property="og:title" content="Rhye - Home " />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://static.found.ee/user/1540/RHYE_HOME_cover_Digital.jpg"
+    />
+    <meta
+      property="og:image"
+      content="https://static.found.ee/user/1540/RHYE_HOME_cover_Digital.jpg"
+    />
+    <meta property="og:url" content="https://found.ee/Rhye_Home" />
+    <meta property="og:type" content="music.album" />
+    <meta property="og:site_name" content="Found.ee" />
+    <meta property="og:description" content="&nbsp;" />
+    <title>Rhye - Home</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://found.ee/super/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://static.found.ee/static/styles.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400"
+      rel="stylesheet"
+    />
+    <script src="https://js-cdn.music.apple.com/musickit/v1/musickit.js"></script>
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      "function" != typeof Object.assign &&
+        Object.defineProperty(Object, "assign", {
+          value: function (e, t) {
+            "use strict";
+            if (null == e)
+              throw new TypeError("Cannot convert undefined or null to object");
+            for (var n = Object(e), r = 1; r < arguments.length; r++) {
+              var o = arguments[r];
+              if (null != o)
+                for (var c in o)
+                  Object.prototype.hasOwnProperty.call(o, c) && (n[c] = o[c]);
+            }
+            return n;
+          },
+          writable: !0,
+          configurable: !0,
+        });
+    </script>
+    <style type="text/css">
+      body {
+        font-family: "Nunito Sans", sans-serif;
+      }
+      .subs-email-fail {
+        color: #ff0000;
+      }
+      .card {
+        border: none;
+        background: transparent !important;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+      }
+      .card-top {
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        max-width: 350px;
+      }
+
+      .play-btn {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        background-color: transparent;
+        background-image: url("https://static.found.ee/static/play_button.svg");
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+      }
+
+      .play-btn:focus {
+        outline: none;
+      }
+
+      .play-btn.playing {
+        background-image: url("https://static.found.ee/static/pause_button.svg");
+      }
+      .card-img-top {
+        border-radius: 0;
+        max-width: 350px;
+        margin: 0 auto;
+      }
+      ul.list-group .list-group-item {
+        cursor: pointer;
+      }
+      ul.list-group .list-group-item {
+        padding: 5px;
+        border: none;
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+        margin: 1em 0 0 0;
+        color: #707070;
+        background-color: #fff;
+        font-weight: 300;
+        font-size: 0.9em;
+        display: block;
+        width: 100%;
+        text-align: left;
+        border-radius: 0.3em;
+      }
+      a,
+      a:hover,
+      a:focus,
+      a:visited {
+        color: #707070;
+        text-decoration: none;
+        background-color: transparent;
+      }
+      ul.list-group .list-group-item:hover,
+      ul.list-group .list-group-item:active {
+        background: #fff;
+      }
+      li.list-group-item .row {
+        align-items: center;
+        color: #000000;
+      }
+      .foundee-shadow {
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
+      }
+      .space-above {
+        margin: 50px auto;
+      }
+      .card-services {
+        margin: 75px auto 0;
+      }
+      @media only screen and (max-width: 768px) {
+        .space-above {
+          margin: 0 auto 50px;
+        }
+        .card-img-top {
+          max-width: 100% !important;
+          margin: 0 auto;
+        }
+        .card-top {
+          width: 100%;
+          margin: 0 auto;
+        }
+        .card-services {
+          margin: 0 auto;
+        }
+        .card-title {
+          font-size: 1.25rem;
+        }
+      }
+      .foundee-input {
+        border: none;
+        background: transparent;
+        outline: 0;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .foundee-store-icon {
+        max-height: 48px;
+        max-width: 150px;
+        margin-left: 8px;
+      }
+
+      .foundee-store-icon-sm {
+        max-height: 36px;
+        max-width: 150px;
+      }
+
+      .foundee-action-btn {
+        background-color: transparent;
+        border: none;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        color: #707070;
+      }
+
+      .foundee-form {
+        margin-bottom: 0;
+      }
+
+      .foundee-page-social-icons {
+        margin: 0.8rem 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 0.4rem;
+      }
+
+      .foundee-page-social-icons > a {
+        margin: 0.2rem 0.4rem;
+      }
+    </style>
+    <style type="text/css">
+      /**
+       * Background Color Change goes here
+       */
+      .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .background-blur {
+        width: 100%;
+        height: 100%;
+        background: url("https://static.found.ee/user/1540/RHYE_HOME_cover_Digital.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        filter: blur(20px);
+        -webkit-filter: blur(20px);
+        -moz-filter: blur(20px);
+        -o-filter: blur(20px);
+        -ms-filter: blur(20px);
+        transform: scale(1.2);
+      }
+      @media screen and (max-width: 1024px) {
+        /* Specific to this particular image */
+        .background {
+          left: 50%;
+          margin-left: -512px; /* 50% */
+        }
+      }
+    </style>
+    <style type="text/css">
+      .foundee-text,
+      .foundee-text:hover,
+      .foundee-text:visited,
+      .foundee-text:focus,
+      .foundee-text:active {
+        /** Override font color */
+        color: #ffffff;
+      }
+    </style>
+  </head>
+
+  <body class="foundee-background">
+    <div class="background">
+      <div class="background-blur"></div>
+    </div>
+    <div class="container">
+      <div class="row space-above">
+        <div class="col-xs-12 col-md-6">
+          <div class="card" style="max-width: 400px; margin: 0 auto">
+            <div class="card-body">
+              <h4 class="card-title foundee-text text-center">Rhye - Home</h4>
+            </div>
+            <div class="card-top">
+              <img
+                class="card-img-top foundee-shadow"
+                alt="Banner"
+                src="https://static.found.ee/user/1540/RHYE_HOME_cover_Digital.jpg"
+              />
+            </div>
+            <div class="card-body">
+              <p class="card-text foundee-text text-center">
+                Pre-order Rhye&#39;s new album Home out everywhere January 22nd.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="card card-services" style="max-width: 400px">
+            <div class="embed-responsive foundee-shadow" style="height: 300px">
+              <iframe
+                width="560"
+                height="315"
+                src="//www.youtube.com/embed/0fizVDRsvOI "
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <ul class="list-group list-group-flush">
+              <!-- Store row -->
+              <li class="list-group-item">
+                <a href="https://found.ee/Rhye_Home/ms-store-0" target="_blank">
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.found.ee/static/logo-store.svg"
+                        alt="Store"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Pre-Order Exclusive Gold Vinyl</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://found.ee/Rhye_Home/ms-custom-1"
+                  target="_blank"
+                >
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.found.ee/user/1540/418462975910.png"
+                        alt="Custom"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Pre-Order Exclusive Purple Vinyl</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://found.ee/Rhye_Home/ms-uo-2" target="_blank">
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.found.ee/static/logo-urbanoutfitters.svg"
+                        alt="Urban Outfitters"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Pre-Order Exclusive Turquoise Vinyl</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://found.ee/Rhye_Home/ms-amazon-3"
+                  target="_blank"
+                >
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.found.ee/static/logo-amazon.svg"
+                        alt="Amazon"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Pre-Order Vinyl / CD</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://api.found.ee/spotify/connect/spotify?presaveId=482&origin=https%3A%2F%2Ffound.ee%2FRhye_Home"
+                  target="_blank"
+                >
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.found.ee/static/logo-spotify-presave.svg"
+                        alt="Spotify Pre-Save"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Pre-Save</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://found.ee/Rhye_Home/ms-applepre-5"
+                  onClick="onApplePreAdd('https://found.ee/Rhye_Home/ms-applepre-5', 'ALBUMS', '1533898535'); return false;"
+                  target="_blank"
+                >
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.found.ee/static/logo-apple-preadd.svg"
+                        alt="Apple Music Pre-Add"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Pre-Add</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://found.ee/Rhye_Home/ms-itunes-6"
+                  target="_blank"
+                >
+                  <div class="row">
+                    <div class="col-8">
+                      <!-- Multistore icon -->
+                      <img
+                        src="https://static.found.ee/static/logo-itunes.svg"
+                        alt="iTunes"
+                        class="foundee-store-icon"
+                      />
+                    </div>
+                    <div class="col-4 border-left button">
+                      <!-- Multistore external link -->
+                      <span>Pre-Order</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bandsintown-widget">
+      <div id="collection-component-1603910926845"></div>
+      <script type="text/javascript">
+        /*<![CDATA[*/
+        (function () {
+          var scriptURL =
+            "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
+          if (window.ShopifyBuy) {
+            if (window.ShopifyBuy.UI) {
+              ShopifyBuyInit();
+            } else {
+              loadScript();
+            }
+          } else {
+            loadScript();
+          }
+          function loadScript() {
+            var script = document.createElement("script");
+            script.async = true;
+            script.src = scriptURL;
+            (
+              document.getElementsByTagName("head")[0] ||
+              document.getElementsByTagName("body")[0]
+            ).appendChild(script);
+            script.onload = ShopifyBuyInit;
+          }
+          function ShopifyBuyInit() {
+            var client = ShopifyBuy.buildClient({
+              domain: "lomavistarecordings.myshopify.com",
+              storefrontAccessToken: "7aec35d4031e86291152441274fbbb22",
+            });
+            ShopifyBuy.UI.onReady(client).then(function (ui) {
+              ui.createComponent("collection", {
+                id: "227914350755",
+                node: document.getElementById(
+                  "collection-component-1603910926845"
+                ),
+                moneyFormat: "%24%7B%7Bamount%7D%7D",
+                options: {
+                  product: {
+                    styles: {
+                      product: {
+                        "@media (min-width: 601px)": {
+                          "max-width": "calc(33.33333% - 30px)",
+                          "margin-left": "30px",
+                          "margin-bottom": "50px",
+                          width: "calc(33.33333% - 30px)",
+                        },
+                      },
+                      title: {
+                        "font-size": "16px",
+                        color: "#000000",
+                      },
+                      button: {
+                        "font-weight": "bold",
+                        color: "#231f20",
+                        ":hover": {
+                          color: "#231f20",
+                          "background-color": "#d4d5d5",
+                        },
+                        "background-color": "#eceded",
+                        ":focus": {
+                          "background-color": "#d4d5d5",
+                        },
+                        "border-radius": "0px",
+                        "padding-left": "50px",
+                        "padding-right": "50px",
+                      },
+                      price: {
+                        "font-weight": "bold",
+                        "font-size": "16px",
+                        color: "#ffffff",
+                      },
+                      compareAt: {
+                        "font-weight": "bold",
+                        "font-size": "13.6px",
+                        color: "#ffffff",
+                      },
+                      unitPrice: {
+                        "font-weight": "bold",
+                        "font-size": "13.6px",
+                        color: "#ffffff",
+                      },
+                    },
+                    buttonDestination: "modal",
+                    contents: {
+                      options: false,
+                    },
+                    text: {
+                      button: "VIEW PRODUCT",
+                    },
+                  },
+                  productSet: {
+                    styles: {
+                      products: {
+                        "@media (min-width: 601px)": {
+                          "margin-left": "-30px",
+                        },
+                      },
+                    },
+                  },
+                  modalProduct: {
+                    contents: {
+                      img: false,
+                      imgWithCarousel: true,
+                      button: false,
+                      buttonWithQuantity: true,
+                    },
+                    styles: {
+                      product: {
+                        "@media (min-width: 601px)": {
+                          "max-width": "100%",
+                          "margin-left": "0px",
+                          "margin-bottom": "0px",
+                        },
+                      },
+                      button: {
+                        "font-weight": "bold",
+                        color: "#231f20",
+                        ":hover": {
+                          color: "#231f20",
+                          "background-color": "#d4d5d5",
+                        },
+                        "background-color": "#eceded",
+                        ":focus": {
+                          "background-color": "#d4d5d5",
+                        },
+                        "border-radius": "0px",
+                        "padding-left": "50px",
+                        "padding-right": "50px",
+                      },
+                      title: {
+                        color: "#ffffff",
+                      },
+                      price: {
+                        color: "#ffffff",
+                      },
+                      compareAt: {
+                        color: "#ffffff",
+                      },
+                      unitPrice: {
+                        color: "#ffffff",
+                      },
+                      description: {
+                        color: "#ffffff",
+                      },
+                    },
+                  },
+                  modal: {
+                    styles: {
+                      modal: {
+                        "background-color": "#313131",
+                      },
+                    },
+                  },
+                  option: {
+                    styles: {
+                      label: {
+                        color: "#ffffff",
+                      },
+                    },
+                  },
+                  cart: {
+                    styles: {
+                      button: {
+                        "font-weight": "bold",
+                        color: "#231f20",
+                        ":hover": {
+                          color: "#231f20",
+                          "background-color": "#d4d5d5",
+                        },
+                        "background-color": "#eceded",
+                        ":focus": {
+                          "background-color": "#d4d5d5",
+                        },
+                        "border-radius": "0px",
+                      },
+                    },
+                    text: {
+                      total: "Subtotal",
+                    },
+                  },
+                  toggle: {
+                    styles: {
+                      toggle: {
+                        "font-weight": "bold",
+                        "background-color": "#eceded",
+                        ":hover": {
+                          "background-color": "#d4d5d5",
+                        },
+                        ":focus": {
+                          "background-color": "#d4d5d5",
+                        },
+                      },
+                      count: {
+                        color: "#231f20",
+                        ":hover": {
+                          color: "#231f20",
+                        },
+                      },
+                      iconPath: {
+                        fill: "#231f20",
+                      },
+                    },
+                  },
+                },
+              });
+            });
+          }
+        })();
+        /*]]>*/
+      </script>
+    </div>
+    <div id="cookies-ccpa" class="ccda cookies">
+      <div class="justify-content-lg-center align-items-lg-center py-3">
+        <div class="col-12 text-center">
+          <div class="disclaimer-text px-3 px-lg-0">
+            <p class="font-small-3 m-0">
+              By using this service, you have accepted Cookies based on our<br />
+              <a target="_blank" href="https://found.ee/super/usersgdpr"
+                >Privacy Policy</a
+              >, and
+              <a target="_blank" href="https://found.ee/super/usersgdpr"
+                >Terms of Service</a
+              >.
+              <a target="_blank" href="https://found.ee/super/ccpa">Manage</a>
+              your permissions here.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cookies" class="gdpr cookies" style="display: none">
+      <div class="container">
+        <div class="row justify-content-lg-center align-items-lg-center py-3">
+          <div class="col-12 col-lg-8 text-center">
+            <div class="disclaimer-text px-3 px-lg-0">
+              <p class="font-small-3 foundee-text">
+                <em
+                  >I agree to the I have been informed and read the
+                  <a target="_blank" href="https://found.ee/super/usersgdpr"
+                    >Privacy Policy</a
+                  >. I understand that Thinketing, Inc. Will process my data as
+                  data controller to manage my registration with found.ee, which
+                  is necessary for the performance of the contract, and that my
+                  data will not be shared with third parties unless legally
+                  required. I am aware I have the right to access, rectify and
+                  erase my data, among others.
+                </em>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 text-center">
+            <button
+              class="btn btn-reject mr-2 foundee-text"
+              onclick="onRejectBtn()"
+            >
+              REJECT
+            </button>
+            <button class="btn btn-accept foundee-text" onclick="onAcceptBtn()">
+              ACCEPT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="application/javascript">
+      (function (w, d) {
+        var dialog = d.querySelector("#cookies");
+        w.saveSelectedRetailer = function saveSelectedRetailer(
+          retailerId,
+          iPageId
+        ) {
+          var check = d.querySelector("#remember-checkbox");
+          if (check.checked) {
+            var value =
+              "pageId=" + iPageId + "|selectedRetail=" + retailerId + ";";
+            d.cookie = "iPageCookie=" + value + ";max-age=6912000;path=/";
+          }
+        };
+
+        w.onAcceptBtn = function onAcceptBtn() {
+          if (dialog) {
+            dialog.style.display = "none";
+            d.cookie = "isAcceptedPermissions=true;max-age=7776000;path=/;";
+          }
+          w.location.reload(true);
+        };
+
+        w.onRejectBtn = function onRejectBtn() {
+          if (dialog) {
+            dialog.style.display = "none";
+            d.cookie = "isAcceptedPermissions=false;max-age=2592000;path=/;";
+          }
+          w.location.reload(true);
+        };
+
+        d.onreadystatechange = function () {
+          if (d.readyState === "complete") {
+            if (
+              d.getElementsByClassName("link-container").childElementCount === 1
+            ) {
+              let checkBox = d.getElementById("remember");
+              checkBox.style.display = "none";
+            }
+            // Visitor has accepted GDPR conditions
+            dialog.style.display = "none";
+          }
+        };
+      })(window, document);
+    </script>
+    <script type="text/javascript">
+      (function (w, d) {
+        function cleanShortCode(path) {
+          if (path.startsWith("/")) {
+            return path.substr(1, path.length - 1);
+          }
+          return path;
+        }
+        function prepareShortCodePayload(path) {
+          var split = path.split("/");
+          if (split.length === 1) {
+            return {
+              shortCode: split[0],
+              referrer: d.referrer,
+            };
+          }
+          return {
+            shortCode: split[0],
+            retailer: split[1],
+            referrer: d.referrer,
+          };
+        }
+        function _sendStats() {
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "/stats", true);
+          xhr.setRequestHeader("Content-type", "application/json");
+          xhr.onload = function () {};
+          xhr.send(JSON.stringify(prepareShortCodePayload(shortCode)));
+        }
+        function _sendStatsUnique() {
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "/stats/unique", true);
+          xhr.setRequestHeader("Content-type", "application/json");
+          xhr.onload = function () {
+            d.cookie = shortCode + "=" + "false;max-age=2592000;path=/";
+          };
+          xhr.send(
+            JSON.stringify(
+              Object.assign({}, prepareShortCodePayload(shortCode), {
+                unique:
+                  d.cookie.split("; ").indexOf(shortCode + "=false") === -1,
+              })
+            )
+          );
+        }
+        if (
+          typeof w.navigator !== "undefined" &&
+          !!~w.navigator.userAgent.indexOf("bot")
+        ) {
+          return false;
+        }
+        var shortCode = cleanShortCode(d.location.pathname);
+        // Run unique stats
+        if (d.cookie.split("; ").indexOf(shortCode + "=false") === -1) {
+          _sendStatsUnique();
+        }
+        _sendStats();
+      })(window, document);
+    </script>
+    <script type="text/javascript">
+      (function (w, d) {
+        w.onApplePreAdd = function onApplePreAdd(link, typeInput, idInput) {
+          let music = MusicKit.getInstance();
+          music.authorize().then(function (token) {
+            music
+              .addToLibrary(idInput, typeInput.toLowerCase())
+              .then(function () {
+                window.open(link, "_blank");
+                alert(
+                  "Woo hoo! It's added to your library. You can hear it upon release."
+                );
+              });
+          });
+        };
+      })(window, document);
+    </script>
+    <script type="text/javascript">
+      (function (w, d) {
+        function guid() {
+          function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+              .toString(16)
+              .substring(1);
+          }
+          return (
+            s4() +
+            s4() +
+            "-" +
+            s4() +
+            "-" +
+            s4() +
+            "-" +
+            s4() +
+            "-" +
+            s4() +
+            s4() +
+            s4()
+          );
+        }
+
+        function getCookie(name) {
+          var name = name + "=";
+          var ca = document.cookie.split(";");
+          for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === " ") c = c.substring(1);
+            if (c.indexOf(name) === 0)
+              return c.substring(name.length, c.length);
+          }
+          return "";
+        }
+
+        function _onAlert(element, message, status) {
+          element.className = element.className.replace("d-none", "d-all");
+          var alertElement = element.querySelector(
+            "#" + element.id + " #alert"
+          );
+          alertElement.className = status;
+          alertElement.innerText = message;
+          setTimeout(function () {
+            element.className = element.className.replace("d-all", "d-none");
+          }, 5000);
+        }
+
+        function _onSuccess(element, message) {
+          _onAlert(element, message, "text-success");
+        }
+
+        function _onError(element, message) {
+          _onAlert(element, message, "text-danger");
+        }
+
+        function _subscribe(email, successCallback, errorCallback) {
+          var xhr = new XMLHttpRequest();
+          xhr.open(
+            "POST",
+            "https://api.found.ee/settings-proxy/modal/capture",
+            true
+          );
+          xhr.setRequestHeader("Content-type", "application/json");
+          xhr.onload = function () {
+            _onSuccess(
+              document.querySelector("#foundee-email-capture-alert"),
+              "Thank you for subscribing!"
+            );
+            if (successCallback) {
+              successCallback();
+            }
+          };
+          xhr.onerror = function () {
+            _onError(
+              document.querySelector("#foundee-email-capture-alert"),
+              "Something went wrong while subscribing!"
+            );
+            if (errorCallback) {
+              errorCallback();
+            }
+          };
+          var uid = getCookie("uid");
+          if (!uid) uid = guid();
+          var payload = {
+            userId: 1540,
+            modalId: 128453,
+            cookieId: uid,
+            type: "PAGE_USER",
+            settings: [{ name: "EMAIL", value: email }],
+          };
+          xhr.send(JSON.stringify(payload));
+        }
+
+        function _requestConcert(email, city) {
+          var xhr = new XMLHttpRequest();
+          xhr.open(
+            "POST",
+            "https://api.found.ee/settings-proxy/modal/capture",
+            true
+          );
+          xhr.setRequestHeader("Content-type", "application/json");
+          xhr.onload = function () {
+            _onSuccess(
+              document.querySelector("#foundee-concert-request-alert"),
+              "Thank you for submitting your request!"
+            );
+          };
+          xhr.onerror = function () {
+            _onError(
+              document.querySelector("#foundee-concert-request-alert"),
+              "Something went wrong while submitting your request!"
+            );
+          };
+          var uid = getCookie("uid");
+          if (!uid) uid = guid();
+          var payload = {
+            userId: 1540,
+            modalId: 128453,
+            cookieId: uid,
+            type: "PAGE_USER",
+            settings: [
+              { name: "EMAIL", value: email + "," + city, controlValue: email },
+            ],
+          };
+          xhr.send(JSON.stringify(payload));
+        }
+
+        w.onSubscribeClick = function (event, successCallback, errorCallback) {
+          event.preventDefault();
+          const mail_format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          const inputText = d.querySelector("#input-subs-email");
+          if (inputText.value.match(mail_format)) {
+            inputText.focus();
+            _subscribe(inputText.value, successCallback, errorCallback);
+          } else {
+            inputText.focus();
+          }
+        };
+
+        w.onRequestClick = function (event) {
+          event.preventDefault();
+          const mail_format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          const emailInput = d.querySelector("#input-request-concert-email");
+          const cityInput = d.querySelector("#input-request-concert-city");
+          if (emailInput.value.match(mail_format)) {
+            emailInput.focus();
+            var cityValue = cityInput.value.replace(/\,/g, " ");
+            _requestConcert(emailInput.value, cityValue);
+          } else {
+            emailInput.focus();
+          }
+        };
+      })(window, document);
+    </script>
+    <script>
+      !(function (e, t, n, s, a, c, p, i, o, u) {
+        e[a] ||
+          (((i = e[a] = function () {
+            i.process ? i.process.apply(i, arguments) : i.queue.push(arguments);
+          }).queue = []),
+          (i.pixelId = "30c33ae2-857d-4629-91fb-edcf843c0123"),
+          (i.t = 1 * new Date()),
+          ((o = t.createElement(n)).async = 1),
+          (o.src =
+            "https://found.ee/dmp/pixel.js?t=" +
+            864e5 * Math.ceil(new Date() / 864e5)),
+          (u = t.getElementsByTagName(n)[0]).parentNode.insertBefore(o, u));
+      })(window, document, "script", 0, "foundee");
+      foundee("", "Y");
+    </script>
+
+    <!-- Segment Pixel - MasterSegmentPixel - DO NOT MODIFY -->
+    <script
+      type="text/javascript"
+      src="http://invertise.s3.amazonaws.com/pixeljs/9c089dda-0e07-4f3a-ad46-83e35cee3e2f.js"
+    ></script>
+    <!-- End of Segment Pixel -->
+    <!-- Segment Pixel - MasterSegmentPixel - DO NOT MODIFY -->
+    <script
+      type="text/javascript"
+      src="http://invertise.s3.amazonaws.com/pixeljs/2556a289-a73d-41fa-8aad-5134f788a35d.js"
+    ></script>
+    <!-- End of Segment Pixel -->
+    <!-- Google Code for Remarketing Tag -->
+    <!--------------------------------------------------
+  Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+  --------------------------------------------------->
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 945731840;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+    </script>
+    <script
+      type="text/javascript"
+      src="//www.googleadservices.com/pagead/conversion.js"
+    ></script>
+    <noscript>
+      <div style="display: inline">
+        <img
+          height="1"
+          width="1"
+          style="border-style: none"
+          alt=""
+          src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/945731840/?value=0&amp;amp;amp;amp;guid=ON&amp;amp;amp;amp;script=0"
+        />
+      </div>
+    </noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MPVQM68"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&amp;amp;l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MPVQM68");
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "//connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "909502779122103");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=909502779122103&amp;amp;amp;ev=PageView&amp;amp;amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Google Code for Remarketing Tag -->
+    <!--------------------------------------------------
+  Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+  --------------------------------------------------->
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 848062201;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+    </script>
+    <script
+      type="text/javascript"
+      src="//www.googleadservices.com/pagead/conversion.js"
+    ></script>
+    <noscript>
+      <div style="display: inline">
+        <img
+          height="1"
+          width="1"
+          style="border-style: none"
+          alt=""
+          src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/848062201/?guid=ON&amp;amp;script=0"
+        />
+      </div>
+    </noscript>
+    <!-- Google Code for Remarketing Tag -->
+    <!--------------------------------------------------
+  Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+  --------------------------------------------------->
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 800534247;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+    </script>
+    <script
+      type="text/javascript"
+      src="//www.googleadservices.com/pagead/conversion.js"
+    ></script>
+    <noscript>
+      <div style="display: inline">
+        <img
+          height="1"
+          width="1"
+          style="border-style: none"
+          alt=""
+          src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/800534247/?guid=ON&amp;script=0"
+        />
+      </div>
+    </noscript>
+    <!-- Global site tag (gtag.js) - Google Ads: 800534247 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-800534247"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-800534247");
+    </script>
+  </body>
+</html>
